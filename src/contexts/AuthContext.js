@@ -61,6 +61,7 @@ export function AuthProvider({ children }) {
 
   const logoutUser = () => {
     localStorage.removeItem("token");
+    window.location.reload();
   };
 
   return (

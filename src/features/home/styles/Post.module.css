@@ -53,3 +53,8 @@
 .dislikeButton span {
   color: #dc3545; /* Red color for dislikes */
 }
+
+.postActionBar {
+  display: flex;
+  justify-content: space-between;
+}
