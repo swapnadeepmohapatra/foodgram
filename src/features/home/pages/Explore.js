@@ -7,7 +7,7 @@ import AllUsers from "../components/AllUsers";
 import Navbar from "../../../global/components/Navbar";
 import SideNav from "../../../global/components/SideNav";
 
-function Feed() {
+function Explore() {
   const { posts } = useContext(FeedContext);
 
   console.log(posts);
@@ -23,7 +23,7 @@ function Feed() {
         <div className={styles.feedContent}>
           {posts
             .sort((a, b) => {
-              return new Date(b.createdAt) - new Date(a.createdAt);
+              return new Date(a.createdAt) - new Date(b.createdAt);
             })
             .map((post) => (
               <Post key={post._id} post={post} />
@@ -37,4 +37,4 @@ function Feed() {
   );
 }
 
-export default Feed;
+export default Explore;

@@ -1,5 +1,5 @@
 .profileContainer {
-  margin: 20px;
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,23 +14,20 @@
   margin-bottom: 20px;
 }
 
-/* .postsSection .post {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+.feedContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.postsSection .post p {
-  margin-bottom: 5px;
+.sidebarLeft,
+.sidebarRight {
+  flex: 1;
 }
 
-.postsSection .post button {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-} */
+.feedContent {
+}
 
 .inputField {
   width: 100%;

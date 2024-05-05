@@ -7,10 +7,10 @@ import AllUsers from "../components/AllUsers";
 import Navbar from "../../../global/components/Navbar";
 import SideNav from "../../../global/components/SideNav";
 
-function Feed() {
-  const { posts } = useContext(FeedContext);
+function Bookmark() {
+  const { bookmarkedPosts } = useContext(FeedContext);
 
-  console.log(posts);
+  console.log(bookmarkedPosts);
 
   return (
     <>
@@ -21,7 +21,7 @@ function Feed() {
           <AddPost />
         </div>
         <div className={styles.feedContent}>
-          {posts
+          {bookmarkedPosts
             .sort((a, b) => {
               return new Date(b.createdAt) - new Date(a.createdAt);
             })
@@ -37,4 +37,4 @@ function Feed() {
   );
 }
 
-export default Feed;
+export default Bookmark;

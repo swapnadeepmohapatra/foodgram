@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { PrivateRoute } from "./global/components/PrivateRoute";
 import Feed from "./features/home/pages/Feed";
 import Profile from "./features/profile/pages/Profile";
+import Bookmark from "./features/home/pages/Bookmark";
+import Explore from "./features/home/pages/Explore";
 
 function App() {
   return (
@@ -29,6 +31,22 @@ function App() {
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/bookmark"
+          element={
+            <PrivateRoute>
+              <Bookmark />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/explore"
+          element={
+            <PrivateRoute>
+              <Explore />
             </PrivateRoute>
           }
         />
