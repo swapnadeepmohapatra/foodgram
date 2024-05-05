@@ -24,6 +24,7 @@ import {
   removePostFromBookmarkHandler,
   unfollowUserHandler,
   editUserHandler,
+  getSelfUserHandler,
 } from "./backend/controllers/UserController";
 
 export function makeServer({ environment = "development" } = {}) {
@@ -87,6 +88,7 @@ export function makeServer({ environment = "development" } = {}) {
         "/users/unfollow/:followUserId/",
         unfollowUserHandler.bind(this)
       );
+      this.get("/user/", getSelfUserHandler.bind(this));
     },
   });
 }

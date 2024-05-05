@@ -15,6 +15,37 @@ export const getAllUsersHandler = function () {
 };
 
 /**
+ * This handler handles gets the preset user from the db.
+ * send GET Request at /api/user
+ * */
+
+export const getSelfUserHandler = function (schema, request) {
+  let user = requiresAuth.call(this, request);
+  try {
+    if (!user) {
+      return new Response(
+        404,
+        {},
+        {
+          errors: [
+            "The username you entered is not Registered. Not Found error",
+          ],
+        }
+      );
+    }
+    return new Response(200, {}, { user });
+  } catch (error) {
+    return new Response(
+      500,
+      {},
+      {
+        error,
+      }
+    );
+  }
+};
+
+/**
  * This handler handles get a user from userId in the db.
  * send GET Request at /api/users/:userId
  * */
