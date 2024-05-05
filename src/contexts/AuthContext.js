@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export const AuthContext = createContext({ isLoggedIn: false });
 
 export function AuthProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -26,6 +28,7 @@ export function AuthProvider({ children }) {
       if (response.ok) {
         console.log(data);
         localStorage.setItem("token", data.encodedToken);
+        navigate("/");
         return data;
       }
       toast.error(data.errors[0]);
@@ -47,6 +50,7 @@ export function AuthProvider({ children }) {
       if (response.ok) {
         console.log(data);
         localStorage.setItem("token", data.encodedToken);
+        navigate("/");
         return data;
       }
       toast.error(data.errors[0]);

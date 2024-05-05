@@ -1,0 +1,55 @@
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.userInfo {
+  margin-bottom: 10px;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.createdAt,
+.updatedAt {
+  font-size: 12px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.content {
+  margin-bottom: 10px;
+}
+
+.likes {
+  display: flex;
+}
+
+.likeButton,
+.dislikeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.likeButton:focus,
+.dislikeButton:focus {
+  outline: none;
+}
+
+.likeButton span,
+.dislikeButton span {
+  margin-right: 5px;
+}
+
+.likeButton span {
+  color: var(--primary-color);
+}
+
+.dislikeButton span {
+  color: #dc3545; /* Red color for dislikes */
+}

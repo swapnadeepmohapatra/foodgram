@@ -1,0 +1,42 @@
+.profileContainer {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatarSection,
+.bioSection,
+.portfolioSection,
+.postsSection {
+  width: 30vw;
+  margin-bottom: 20px;
+}
+
+/* .postsSection .post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.postsSection .post p {
+  margin-bottom: 5px;
+}
+
+.postsSection .post button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+} */
+
+.inputField {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+}

@@ -1,0 +1,15 @@
+.feedContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebarLeft,
+.sidebarRight {
+  flex: 1;
+}
+
+.feedContent {
+  flex-grow: 1;
+}

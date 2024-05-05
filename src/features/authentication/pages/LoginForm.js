@@ -17,12 +17,6 @@ function LoginForm() {
     } else {
       loginUser(loginData.username, loginData.password);
     }
-    // dispatch(
-    //   loginUser({
-    //     username: loginData.username,
-    //     password: loginData.password,
-    //   })
-    // );
   };
 
   const onChangeHandler = (name) => (e) => {
