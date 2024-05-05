@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import LoginForm from "./features/authentication/pages/LoginForm";
 import SignupForm from "./features/authentication/pages/SignupForm";
 import { ToastContainer } from "react-toastify";

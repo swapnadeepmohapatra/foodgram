@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-// import AvatarUpload from "./AvatarUpload"; // Assuming you have a component for uploading avatars
-import styles from "../styles/Profile.module.css"; // Importing the CSS module for styling
+import styles from "../styles/Profile.module.css";
 import Navbar from "../../../global/components/Navbar";
 import AvatarUpload from "../components/AvatarUpload";
 import { UserContext } from "../../../contexts/UserContext";
@@ -14,7 +13,7 @@ function Profile() {
   const [bio, setBio] = useState("");
   const [portfolio, setPortfolio] = useState("");
   const [avatar, setAvatar] = useState(null);
-  const [posts, setPosts] = useState([]); // Assuming you have a state for posts
+  const [posts, setPosts] = useState([]);
   const { getUserPosts } = useContext(UserContext);
 
   const handleBioChange = (e) => {
@@ -27,12 +26,6 @@ function Profile() {
 
   const handleAvatarChange = (newAvatar) => {
     setAvatar(newAvatar);
-  };
-
-  const handlePostDelete = (postId) => {
-    // Logic to delete the post with postId
-    const updatedPosts = posts.filter((post) => post.id !== postId);
-    setPosts(updatedPosts);
   };
 
   useEffect(() => {

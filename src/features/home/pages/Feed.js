@@ -6,7 +6,6 @@ import AddPost from "../components/AddPost";
 import AllUsers from "../components/AllUsers";
 import Navbar from "../../../global/components/Navbar";
 import SideNav from "../../../global/components/SideNav";
-import RightBar from "../../../global/components/User";
 
 function Feed() {
   const { posts } = useContext(FeedContext);
